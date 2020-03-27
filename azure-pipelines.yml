@@ -43,7 +43,7 @@ steps:
 
         LOCATION=centralus
         RG=terraformrg
-        STORAGE_ACCOUNT= tsheerantfstate
+        STORAGE_ACCOUNT=tsheerantfstate
 
         az group create \
           --location ${LOCATION} \
