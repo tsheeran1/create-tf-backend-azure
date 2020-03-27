@@ -46,8 +46,8 @@ steps:
         STORAGE_ACCOUNT=tsheerantfstate
 
         az group create \
-          --location "${LOCATION}" \
-          --name "${RG}"
+          --location "$(LOCATION)" \
+          --name "$(RG"
 
 
       addSpnToEnvironment: true
