@@ -46,7 +46,7 @@ steps:
         STORAGE_ACCOUNT=tsheerantfstate
 
         az group create \
-          --location "${LOCATION}"" \
+          --location "${LOCATION}" \
           --name "${RG}"
 
 
