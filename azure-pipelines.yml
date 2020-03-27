@@ -45,8 +45,8 @@ steps:
         RG=terraformrg
         STORAGE_ACCOUNT=tsheerantfstate
 
-        az group create \
-          --location "$(LOCATION)" \
+        az group create |
+          --location "$(LOCATION)" |
           --name "$(RG)"
 
 
