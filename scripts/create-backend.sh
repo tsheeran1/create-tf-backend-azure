@@ -6,7 +6,7 @@ LOCATION=centralus
 RG=terraformrg
 
 # Create unique name for storage account
-STORAGE_ACCOUNT= "tsheeran-tfstate"
+STORAGE_ACCOUNT= "tsheerantfstate"
 
 # Create Resource Group for Backend Storage
 az group create \
