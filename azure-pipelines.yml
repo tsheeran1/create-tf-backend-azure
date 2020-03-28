@@ -54,7 +54,6 @@ steps:
       failOnStandardError: true
       scriptType: bash
       azureSubscription: "Azure RM 1"
-      scriptPath: './scripts/create-backend.sh'
       scriptLocation: inlineScript
       inlineScript: |
         set -euo pipefail
