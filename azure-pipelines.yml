@@ -13,7 +13,10 @@ variables:
     value: 0.12.24
   - name: tf_in_automation
     value: true
-      
+  - name: LOCATION
+    value: centralus
+  - name: RG
+    value: terraformrg      
 
 pool:
   vmImage: 'ubuntu-latest'
