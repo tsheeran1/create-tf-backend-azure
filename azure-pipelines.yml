@@ -57,6 +57,9 @@ steps:
         set -euo pipefail
         echo "Starting backend config"
 
+        LOCATION=centralus
+        RG=terraformrg
+
         az group create --location $(LOCATION) --name $(RG)
 
         echo "Finishing RG creation"
