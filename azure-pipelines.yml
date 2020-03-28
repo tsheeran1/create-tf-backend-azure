@@ -41,19 +41,19 @@ steps:
         echo "##vso[task.setvariable variable=AZURE_SUBSCRIPTION_ID;issecret=true]$(az account show --query 'id' -o tsv)"
         echo "##vso[task.setvariable variable=AZURE_TENANT_ID;issecret=true]${tenantId}"
 
-        LOCATION=centralus
-        RG=terraformrg
-        STORAGE_ACCOUNT=tsheerantfstate
-
-        az group create |
-          --location "$(LOCATION)" |
-          --name "$(RG)"
-
-
       addSpnToEnvironment: true
       failOnStandardError: true
     displayName: 'Environment Setup'
 
+  - task: AzureCLI@2
+    inputs:
+      addSpnToEnvironment: true
+      failOnStandardError: true
+      scriptType: bash
+      azureSubscription: "Azure RM 1"
+      scriptPath: './scripts/create-backend.sh'
+      scriptLocation: 'scriptPath'
+    displayName: 'Backend Config'
 
 
 
